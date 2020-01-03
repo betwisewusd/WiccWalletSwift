@@ -1,0 +1,918 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		140E24C12B6E6060264C9947 /* Pods_WiccWalletSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00D9A41AE2A7030BFDE1D9C /* Pods_WiccWalletSwift.framework */; };
+		9FC0210A23BE1F3B00C3413B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0210923BE1F3B00C3413B /* AppDelegate.swift */; };
+		9FC0210C23BE1F3B00C3413B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0210B23BE1F3B00C3413B /* SceneDelegate.swift */; };
+		9FC0210E23BE1F3B00C3413B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0210D23BE1F3B00C3413B /* ViewController.swift */; };
+		9FC0211123BE1F3B00C3413B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC0210F23BE1F3B00C3413B /* Main.storyboard */; };
+		9FC0211323BE1F3B00C3413B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC0211223BE1F3B00C3413B /* Assets.xcassets */; };
+		9FC0211623BE1F3B00C3413B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC0211423BE1F3B00C3413B /* LaunchScreen.storyboard */; };
+		9FC0212123BE1F3B00C3413B /* WiccWalletSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0212023BE1F3B00C3413B /* WiccWalletSwiftTests.swift */; };
+		9FC0212C23BE1F3B00C3413B /* WiccWalletSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0212B23BE1F3B00C3413B /* WiccWalletSwiftUITests.swift */; };
+		9FC0213F23BE1F6200C3413B /* Bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0213C23BE1F6200C3413B /* Bridge.m */; };
+		9FC0214123BE1F6200C3413B /* BridgeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0213E23BE1F6200C3413B /* BridgeModel.m */; };
+		9FC0214423BE1FA300C3413B /* Wiccwallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FC0213D23BE1F6200C3413B /* Wiccwallet.framework */; };
+		9FC0214623BE222500C3413B /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0214523BE222500C3413B /* AccountManager.swift */; };
+		9FC0214823BE226800C3413B /* ADecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0214723BE226800C3413B /* ADecoder.swift */; };
+		9FC0214A23BE230200C3413B /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0214923BE230200C3413B /* Object.swift */; };
+		9FC0214E23BE238F00C3413B /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0214D23BE238F00C3413B /* NSString+Hash.m */; };
+		9FC0215A23BE270F00C3413B /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0215623BE270F00C3413B /* GTMBase64.m */; };
+		9FC0215B23BE270F00C3413B /* SecurityUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0215723BE270F00C3413B /* SecurityUtil.m */; };
+		9FC0215C23BE270F00C3413B /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0215823BE270F00C3413B /* NSData+AES.m */; };
+		9FC0215E23BED25000C3413B /* JSToAppGetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0215D23BED25000C3413B /* JSToAppGetManager.swift */; };
+		9FC0217523BED74000C3413B /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0216D23BED74000C3413B /* WebViewJavascriptBridgeBase.m */; };
+		9FC0217623BED74000C3413B /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0216E23BED74000C3413B /* WKWebViewJavascriptBridge.m */; };
+		9FC0217723BED74000C3413B /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0216F23BED74000C3413B /* WebViewJavascriptBridge.m */; };
+		9FC0217823BED74000C3413B /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0217223BED74000C3413B /* WebViewJavascriptBridge_JS.m */; };
+		9FC0217A23BEDC5600C3413B /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0217923BEDC5500C3413B /* JSON.swift */; };
+		9FC0217D23BEDD8000C3413B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0217C23BEDD8000C3413B /* SwiftyJSON.swift */; };
+		9FC0217F23BEDE1A00C3413B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0217E23BEDE1A00C3413B /* String.swift */; };
+		9FC0218123BEDE8E00C3413B /* LocalizationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0218023BEDE8E00C3413B /* LocalizationTool.swift */; };
+		9FC0218523BEE03F00C3413B /* ConfigureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0218423BEE03F00C3413B /* ConfigureManager.swift */; };
+		9FC0218723BEE1B700C3413B /* OtherTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0218623BEE1B700C3413B /* OtherTools.swift */; };
+		9FC0218923BEE40000C3413B /* BaseWebProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0218823BEE40000C3413B /* BaseWebProvider.swift */; };
+		9FC0218B23BEE48E00C3413B /* BaseWebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0218A23BEE48D00C3413B /* BaseWebController.swift */; };
+		9FC0218D23BEF2A700C3413B /* JSToAppNotifyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0218C23BEF2A600C3413B /* JSToAppNotifyManager.swift */; };
+		9FC0218F23BF164600C3413B /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0218E23BF164600C3413B /* RequestHandler.swift */; };
+		9FC0219323BF1D1100C3413B /* UUIDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0219123BF1D1100C3413B /* UUIDTool.m */; };
+		9FC0219523BF1D6A00C3413B /* TimeTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0219423BF1D6A00C3413B /* TimeTools.swift */; };
+		9FC0219723BF20F500C3413B /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0219623BF20F500C3413B /* Device.swift */; };
+		9FC0219923BF210C00C3413B /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0219823BF210C00C3413B /* Screen.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9FC0211D23BE1F3B00C3413B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FC020FE23BE1F3B00C3413B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FC0210523BE1F3B00C3413B;
+			remoteInfo = WiccWalletSwift;
+		};
+		9FC0212823BE1F3B00C3413B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FC020FE23BE1F3B00C3413B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FC0210523BE1F3B00C3413B;
+			remoteInfo = WiccWalletSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06B94819FB9DC65052A62C4F /* Pods-WiccWalletSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccWalletSwift.release.xcconfig"; path = "Target Support Files/Pods-WiccWalletSwift/Pods-WiccWalletSwift.release.xcconfig"; sourceTree = "<group>"; };
+		5AE60C7564B2717DFC51370E /* Pods-WiccWalletSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccWalletSwift.debug.xcconfig"; path = "Target Support Files/Pods-WiccWalletSwift/Pods-WiccWalletSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		9FC0210623BE1F3B00C3413B /* WiccWalletSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiccWalletSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FC0210923BE1F3B00C3413B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9FC0210B23BE1F3B00C3413B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9FC0210D23BE1F3B00C3413B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9FC0211023BE1F3B00C3413B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9FC0211223BE1F3B00C3413B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FC0211523BE1F3B00C3413B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9FC0211723BE1F3B00C3413B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FC0211C23BE1F3B00C3413B /* WiccWalletSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiccWalletSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FC0212023BE1F3B00C3413B /* WiccWalletSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiccWalletSwiftTests.swift; sourceTree = "<group>"; };
+		9FC0212223BE1F3B00C3413B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FC0212723BE1F3B00C3413B /* WiccWalletSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiccWalletSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FC0212B23BE1F3B00C3413B /* WiccWalletSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiccWalletSwiftUITests.swift; sourceTree = "<group>"; };
+		9FC0212D23BE1F3B00C3413B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FC0213A23BE1F6200C3413B /* Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		9FC0213B23BE1F6200C3413B /* BridgeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeModel.h; sourceTree = "<group>"; };
+		9FC0213C23BE1F6200C3413B /* Bridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bridge.m; sourceTree = "<group>"; };
+		9FC0213D23BE1F6200C3413B /* Wiccwallet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Wiccwallet.framework; sourceTree = "<group>"; };
+		9FC0213E23BE1F6200C3413B /* BridgeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgeModel.m; sourceTree = "<group>"; };
+		9FC0214523BE222500C3413B /* AccountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		9FC0214723BE226800C3413B /* ADecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADecoder.swift; sourceTree = "<group>"; };
+		9FC0214923BE230200C3413B /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		9FC0214D23BE238F00C3413B /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		9FC0214F23BE239900C3413B /* NSString+Hash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		9FC0215023BE256200C3413B /* WiccWalletSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WiccWalletSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		9FC0215223BE270F00C3413B /* NSData+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES.h"; sourceTree = "<group>"; };
+		9FC0215423BE270F00C3413B /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		9FC0215523BE270F00C3413B /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		9FC0215623BE270F00C3413B /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		9FC0215723BE270F00C3413B /* SecurityUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityUtil.m; sourceTree = "<group>"; };
+		9FC0215823BE270F00C3413B /* NSData+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES.m"; sourceTree = "<group>"; };
+		9FC0215923BE270F00C3413B /* SecurityUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityUtil.h; sourceTree = "<group>"; };
+		9FC0215D23BED25000C3413B /* JSToAppGetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSToAppGetManager.swift; sourceTree = "<group>"; };
+		9FC0216D23BED74000C3413B /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		9FC0216E23BED74000C3413B /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		9FC0216F23BED74000C3413B /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		9FC0217023BED74000C3413B /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
+		9FC0217123BED74000C3413B /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		9FC0217223BED74000C3413B /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
+		9FC0217323BED74000C3413B /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		9FC0217423BED74000C3413B /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		9FC0217923BEDC5500C3413B /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		9FC0217C23BEDD8000C3413B /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		9FC0217E23BEDE1A00C3413B /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		9FC0218023BEDE8E00C3413B /* LocalizationTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationTool.swift; sourceTree = "<group>"; };
+		9FC0218423BEE03F00C3413B /* ConfigureManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureManager.swift; sourceTree = "<group>"; };
+		9FC0218623BEE1B700C3413B /* OtherTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherTools.swift; sourceTree = "<group>"; };
+		9FC0218823BEE40000C3413B /* BaseWebProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebProvider.swift; sourceTree = "<group>"; };
+		9FC0218A23BEE48D00C3413B /* BaseWebController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebController.swift; sourceTree = "<group>"; };
+		9FC0218C23BEF2A600C3413B /* JSToAppNotifyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSToAppNotifyManager.swift; sourceTree = "<group>"; };
+		9FC0218E23BF164600C3413B /* RequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		9FC0219123BF1D1100C3413B /* UUIDTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUIDTool.m; sourceTree = "<group>"; };
+		9FC0219223BF1D1100C3413B /* UUIDTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUIDTool.h; sourceTree = "<group>"; };
+		9FC0219423BF1D6A00C3413B /* TimeTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTools.swift; sourceTree = "<group>"; };
+		9FC0219623BF20F500C3413B /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		9FC0219823BF210C00C3413B /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		C00D9A41AE2A7030BFDE1D9C /* Pods_WiccWalletSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiccWalletSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9FC0210323BE1F3B00C3413B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FC0214423BE1FA300C3413B /* Wiccwallet.framework in Frameworks */,
+				140E24C12B6E6060264C9947 /* Pods_WiccWalletSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FC0211923BE1F3B00C3413B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FC0212423BE1F3B00C3413B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4DDA371CD6E8E61E8CC6FD81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5AE60C7564B2717DFC51370E /* Pods-WiccWalletSwift.debug.xcconfig */,
+				06B94819FB9DC65052A62C4F /* Pods-WiccWalletSwift.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9FC020FD23BE1F3B00C3413B = {
+			isa = PBXGroup;
+			children = (
+				9FC0210823BE1F3B00C3413B /* WiccWalletSwift */,
+				9FC0211F23BE1F3B00C3413B /* WiccWalletSwiftTests */,
+				9FC0212A23BE1F3B00C3413B /* WiccWalletSwiftUITests */,
+				9FC0210723BE1F3B00C3413B /* Products */,
+				4DDA371CD6E8E61E8CC6FD81 /* Pods */,
+				C0104677206B936CA3AFDA66 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9FC0210723BE1F3B00C3413B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FC0210623BE1F3B00C3413B /* WiccWalletSwift.app */,
+				9FC0211C23BE1F3B00C3413B /* WiccWalletSwiftTests.xctest */,
+				9FC0212723BE1F3B00C3413B /* WiccWalletSwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FC0210823BE1F3B00C3413B /* WiccWalletSwift */ = {
+			isa = PBXGroup;
+			children = (
+				9FC0219B23BF255E00C3413B /* Extension */,
+				9FC0214223BE1F6A00C3413B /* Library */,
+				9FC0215023BE256200C3413B /* WiccWalletSwift-Bridging-Header.h */,
+				9FC0210923BE1F3B00C3413B /* AppDelegate.swift */,
+				9FC0210B23BE1F3B00C3413B /* SceneDelegate.swift */,
+				9FC0210D23BE1F3B00C3413B /* ViewController.swift */,
+				9FC0210F23BE1F3B00C3413B /* Main.storyboard */,
+				9FC0211223BE1F3B00C3413B /* Assets.xcassets */,
+				9FC0211423BE1F3B00C3413B /* LaunchScreen.storyboard */,
+				9FC0211723BE1F3B00C3413B /* Info.plist */,
+			);
+			path = WiccWalletSwift;
+			sourceTree = "<group>";
+		};
+		9FC0211F23BE1F3B00C3413B /* WiccWalletSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				9FC0212023BE1F3B00C3413B /* WiccWalletSwiftTests.swift */,
+				9FC0212223BE1F3B00C3413B /* Info.plist */,
+			);
+			path = WiccWalletSwiftTests;
+			sourceTree = "<group>";
+		};
+		9FC0212A23BE1F3B00C3413B /* WiccWalletSwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9FC0212B23BE1F3B00C3413B /* WiccWalletSwiftUITests.swift */,
+				9FC0212D23BE1F3B00C3413B /* Info.plist */,
+			);
+			path = WiccWalletSwiftUITests;
+			sourceTree = "<group>";
+		};
+		9FC0213923BE1F6200C3413B /* WiccLib */ = {
+			isa = PBXGroup;
+			children = (
+				9FC0215123BE270F00C3413B /* Security */,
+				9FC0214523BE222500C3413B /* AccountManager.swift */,
+				9FC0213A23BE1F6200C3413B /* Bridge.h */,
+				9FC0213B23BE1F6200C3413B /* BridgeModel.h */,
+				9FC0213C23BE1F6200C3413B /* Bridge.m */,
+				9FC0218623BEE1B700C3413B /* OtherTools.swift */,
+				9FC0215D23BED25000C3413B /* JSToAppGetManager.swift */,
+				9FC0218C23BEF2A600C3413B /* JSToAppNotifyManager.swift */,
+				9FC0218023BEDE8E00C3413B /* LocalizationTool.swift */,
+				9FC0218423BEE03F00C3413B /* ConfigureManager.swift */,
+				9FC0218823BEE40000C3413B /* BaseWebProvider.swift */,
+				9FC0218A23BEE48D00C3413B /* BaseWebController.swift */,
+				9FC0218E23BF164600C3413B /* RequestHandler.swift */,
+				9FC0213D23BE1F6200C3413B /* Wiccwallet.framework */,
+				9FC0213E23BE1F6200C3413B /* BridgeModel.m */,
+			);
+			path = WiccLib;
+			sourceTree = "<group>";
+		};
+		9FC0214223BE1F6A00C3413B /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				9FC0219023BF1D1100C3413B /* UUID */,
+				9FC0217B23BEDD8000C3413B /* SwiftyJSON */,
+				9FC0216C23BED74000C3413B /* WebViewJavascriptBridge */,
+				9FC0213923BE1F6200C3413B /* WiccLib */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		9FC0215123BE270F00C3413B /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				9FC0215223BE270F00C3413B /* NSData+AES.h */,
+				9FC0215323BE270F00C3413B /* GTMBase64 */,
+				9FC0215723BE270F00C3413B /* SecurityUtil.m */,
+				9FC0215823BE270F00C3413B /* NSData+AES.m */,
+				9FC0215923BE270F00C3413B /* SecurityUtil.h */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		9FC0215323BE270F00C3413B /* GTMBase64 */ = {
+			isa = PBXGroup;
+			children = (
+				9FC0215423BE270F00C3413B /* GTMBase64.h */,
+				9FC0215523BE270F00C3413B /* GTMDefines.h */,
+				9FC0215623BE270F00C3413B /* GTMBase64.m */,
+			);
+			path = GTMBase64;
+			sourceTree = "<group>";
+		};
+		9FC0216C23BED74000C3413B /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				9FC0216D23BED74000C3413B /* WebViewJavascriptBridgeBase.m */,
+				9FC0216E23BED74000C3413B /* WKWebViewJavascriptBridge.m */,
+				9FC0216F23BED74000C3413B /* WebViewJavascriptBridge.m */,
+				9FC0217023BED74000C3413B /* WebViewJavascriptBridge_JS.h */,
+				9FC0217123BED74000C3413B /* WebViewJavascriptBridgeBase.h */,
+				9FC0217223BED74000C3413B /* WebViewJavascriptBridge_JS.m */,
+				9FC0217323BED74000C3413B /* WebViewJavascriptBridge.h */,
+				9FC0217423BED74000C3413B /* WKWebViewJavascriptBridge.h */,
+			);
+			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
+		9FC0217B23BEDD8000C3413B /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				9FC0217C23BEDD8000C3413B /* SwiftyJSON.swift */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		9FC0219023BF1D1100C3413B /* UUID */ = {
+			isa = PBXGroup;
+			children = (
+				9FC0219123BF1D1100C3413B /* UUIDTool.m */,
+				9FC0219223BF1D1100C3413B /* UUIDTool.h */,
+			);
+			path = UUID;
+			sourceTree = "<group>";
+		};
+		9FC0219B23BF255E00C3413B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9FC0217E23BEDE1A00C3413B /* String.swift */,
+				9FC0214923BE230200C3413B /* Object.swift */,
+				9FC0217923BEDC5500C3413B /* JSON.swift */,
+				9FC0214F23BE239900C3413B /* NSString+Hash.h */,
+				9FC0214D23BE238F00C3413B /* NSString+Hash.m */,
+				9FC0219423BF1D6A00C3413B /* TimeTools.swift */,
+				9FC0219623BF20F500C3413B /* Device.swift */,
+				9FC0219823BF210C00C3413B /* Screen.swift */,
+				9FC0214723BE226800C3413B /* ADecoder.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C0104677206B936CA3AFDA66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C00D9A41AE2A7030BFDE1D9C /* Pods_WiccWalletSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9FC0210523BE1F3B00C3413B /* WiccWalletSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FC0213023BE1F3B00C3413B /* Build configuration list for PBXNativeTarget "WiccWalletSwift" */;
+			buildPhases = (
+				33DB51D5514A98D4E111D9AA /* [CP] Check Pods Manifest.lock */,
+				9FC0210223BE1F3B00C3413B /* Sources */,
+				9FC0210323BE1F3B00C3413B /* Frameworks */,
+				9FC0210423BE1F3B00C3413B /* Resources */,
+				84E47187C9658993A5DBDE78 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WiccWalletSwift;
+			productName = WiccWalletSwift;
+			productReference = 9FC0210623BE1F3B00C3413B /* WiccWalletSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9FC0211B23BE1F3B00C3413B /* WiccWalletSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FC0213323BE1F3B00C3413B /* Build configuration list for PBXNativeTarget "WiccWalletSwiftTests" */;
+			buildPhases = (
+				9FC0211823BE1F3B00C3413B /* Sources */,
+				9FC0211923BE1F3B00C3413B /* Frameworks */,
+				9FC0211A23BE1F3B00C3413B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FC0211E23BE1F3B00C3413B /* PBXTargetDependency */,
+			);
+			name = WiccWalletSwiftTests;
+			productName = WiccWalletSwiftTests;
+			productReference = 9FC0211C23BE1F3B00C3413B /* WiccWalletSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9FC0212623BE1F3B00C3413B /* WiccWalletSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FC0213623BE1F3B00C3413B /* Build configuration list for PBXNativeTarget "WiccWalletSwiftUITests" */;
+			buildPhases = (
+				9FC0212323BE1F3B00C3413B /* Sources */,
+				9FC0212423BE1F3B00C3413B /* Frameworks */,
+				9FC0212523BE1F3B00C3413B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FC0212923BE1F3B00C3413B /* PBXTargetDependency */,
+			);
+			name = WiccWalletSwiftUITests;
+			productName = WiccWalletSwiftUITests;
+			productReference = 9FC0212723BE1F3B00C3413B /* WiccWalletSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9FC020FE23BE1F3B00C3413B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = waykichain;
+				TargetAttributes = {
+					9FC0210523BE1F3B00C3413B = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					9FC0211B23BE1F3B00C3413B = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 9FC0210523BE1F3B00C3413B;
+					};
+					9FC0212623BE1F3B00C3413B = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 9FC0210523BE1F3B00C3413B;
+					};
+				};
+			};
+			buildConfigurationList = 9FC0210123BE1F3B00C3413B /* Build configuration list for PBXProject "WiccWalletSwift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9FC020FD23BE1F3B00C3413B;
+			productRefGroup = 9FC0210723BE1F3B00C3413B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9FC0210523BE1F3B00C3413B /* WiccWalletSwift */,
+				9FC0211B23BE1F3B00C3413B /* WiccWalletSwiftTests */,
+				9FC0212623BE1F3B00C3413B /* WiccWalletSwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9FC0210423BE1F3B00C3413B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FC0211623BE1F3B00C3413B /* LaunchScreen.storyboard in Resources */,
+				9FC0211323BE1F3B00C3413B /* Assets.xcassets in Resources */,
+				9FC0211123BE1F3B00C3413B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FC0211A23BE1F3B00C3413B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FC0212523BE1F3B00C3413B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33DB51D5514A98D4E111D9AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WiccWalletSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84E47187C9658993A5DBDE78 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WiccWalletSwift/Pods-WiccWalletSwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WiccWalletSwift/Pods-WiccWalletSwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WiccWalletSwift/Pods-WiccWalletSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FC0210223BE1F3B00C3413B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FC0219923BF210C00C3413B /* Screen.swift in Sources */,
+				9FC0213F23BE1F6200C3413B /* Bridge.m in Sources */,
+				9FC0218723BEE1B700C3413B /* OtherTools.swift in Sources */,
+				9FC0210E23BE1F3B00C3413B /* ViewController.swift in Sources */,
+				9FC0217F23BEDE1A00C3413B /* String.swift in Sources */,
+				9FC0215A23BE270F00C3413B /* GTMBase64.m in Sources */,
+				9FC0218F23BF164600C3413B /* RequestHandler.swift in Sources */,
+				9FC0219323BF1D1100C3413B /* UUIDTool.m in Sources */,
+				9FC0217D23BEDD8000C3413B /* SwiftyJSON.swift in Sources */,
+				9FC0218D23BEF2A700C3413B /* JSToAppNotifyManager.swift in Sources */,
+				9FC0219723BF20F500C3413B /* Device.swift in Sources */,
+				9FC0210A23BE1F3B00C3413B /* AppDelegate.swift in Sources */,
+				9FC0217523BED74000C3413B /* WebViewJavascriptBridgeBase.m in Sources */,
+				9FC0217723BED74000C3413B /* WebViewJavascriptBridge.m in Sources */,
+				9FC0219523BF1D6A00C3413B /* TimeTools.swift in Sources */,
+				9FC0217623BED74000C3413B /* WKWebViewJavascriptBridge.m in Sources */,
+				9FC0218523BEE03F00C3413B /* ConfigureManager.swift in Sources */,
+				9FC0218123BEDE8E00C3413B /* LocalizationTool.swift in Sources */,
+				9FC0218923BEE40000C3413B /* BaseWebProvider.swift in Sources */,
+				9FC0215E23BED25000C3413B /* JSToAppGetManager.swift in Sources */,
+				9FC0217A23BEDC5600C3413B /* JSON.swift in Sources */,
+				9FC0214E23BE238F00C3413B /* NSString+Hash.m in Sources */,
+				9FC0214823BE226800C3413B /* ADecoder.swift in Sources */,
+				9FC0215B23BE270F00C3413B /* SecurityUtil.m in Sources */,
+				9FC0210C23BE1F3B00C3413B /* SceneDelegate.swift in Sources */,
+				9FC0218B23BEE48E00C3413B /* BaseWebController.swift in Sources */,
+				9FC0214123BE1F6200C3413B /* BridgeModel.m in Sources */,
+				9FC0217823BED74000C3413B /* WebViewJavascriptBridge_JS.m in Sources */,
+				9FC0214A23BE230200C3413B /* Object.swift in Sources */,
+				9FC0215C23BE270F00C3413B /* NSData+AES.m in Sources */,
+				9FC0214623BE222500C3413B /* AccountManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FC0211823BE1F3B00C3413B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FC0212123BE1F3B00C3413B /* WiccWalletSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FC0212323BE1F3B00C3413B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FC0212C23BE1F3B00C3413B /* WiccWalletSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9FC0211E23BE1F3B00C3413B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FC0210523BE1F3B00C3413B /* WiccWalletSwift */;
+			targetProxy = 9FC0211D23BE1F3B00C3413B /* PBXContainerItemProxy */;
+		};
+		9FC0212923BE1F3B00C3413B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FC0210523BE1F3B00C3413B /* WiccWalletSwift */;
+			targetProxy = 9FC0212823BE1F3B00C3413B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9FC0210F23BE1F3B00C3413B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FC0211023BE1F3B00C3413B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9FC0211423BE1F3B00C3413B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FC0211523BE1F3B00C3413B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9FC0212E23BE1F3B00C3413B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = (
+					"${SRCROOT}/**",
+					"$(SRCROOT)/..",
+				);
+			};
+			name = Debug;
+		};
+		9FC0212F23BE1F3B00C3413B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = (
+					"${SRCROOT}/**",
+					"$(SRCROOT)/..",
+				);
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9FC0213123BE1F3B00C3413B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AE60C7564B2717DFC51370E /* Pods-WiccWalletSwift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LQM566W8QX;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WiccWalletSwift/WiccLib",
+					"$(PROJECT_DIR)/WiccWalletSwift/Library/WiccLib",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers\"",
+					"${SRCROOT}",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)",
+				);
+				INFOPLIST_FILE = WiccWalletSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WiccWallet.WiccWalletSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WiccWalletSwift/WiccWalletSwift-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = (
+					"$(SRCROOT)/**",
+					"$(SRCROOT)/../**",
+					"${SRCROOT}/**",
+				);
+			};
+			name = Debug;
+		};
+		9FC0213223BE1F3B00C3413B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06B94819FB9DC65052A62C4F /* Pods-WiccWalletSwift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LQM566W8QX;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WiccWalletSwift/WiccLib",
+					"$(PROJECT_DIR)/WiccWalletSwift/Library/WiccLib",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SVProgressHUD/SVProgressHUD.framework/Headers\"",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)",
+				);
+				INFOPLIST_FILE = WiccWalletSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WiccWallet.WiccWalletSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WiccWalletSwift/WiccWalletSwift-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../**",
+					"$(SRCROOT)/**",
+					"${SRCROOT}/**",
+				);
+			};
+			name = Release;
+		};
+		9FC0213423BE1F3B00C3413B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LQM566W8QX;
+				INFOPLIST_FILE = WiccWalletSwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WiccWallet.WiccWalletSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WiccWalletSwift.app/WiccWalletSwift";
+			};
+			name = Debug;
+		};
+		9FC0213523BE1F3B00C3413B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LQM566W8QX;
+				INFOPLIST_FILE = WiccWalletSwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WiccWallet.WiccWalletSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WiccWalletSwift.app/WiccWalletSwift";
+			};
+			name = Release;
+		};
+		9FC0213723BE1F3B00C3413B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LQM566W8QX;
+				INFOPLIST_FILE = WiccWalletSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WiccWallet.WiccWalletSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WiccWalletSwift;
+			};
+			name = Debug;
+		};
+		9FC0213823BE1F3B00C3413B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LQM566W8QX;
+				INFOPLIST_FILE = WiccWalletSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WiccWallet.WiccWalletSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WiccWalletSwift;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9FC0210123BE1F3B00C3413B /* Build configuration list for PBXProject "WiccWalletSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FC0212E23BE1F3B00C3413B /* Debug */,
+				9FC0212F23BE1F3B00C3413B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FC0213023BE1F3B00C3413B /* Build configuration list for PBXNativeTarget "WiccWalletSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FC0213123BE1F3B00C3413B /* Debug */,
+				9FC0213223BE1F3B00C3413B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FC0213323BE1F3B00C3413B /* Build configuration list for PBXNativeTarget "WiccWalletSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FC0213423BE1F3B00C3413B /* Debug */,
+				9FC0213523BE1F3B00C3413B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FC0213623BE1F3B00C3413B /* Build configuration list for PBXNativeTarget "WiccWalletSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FC0213723BE1F3B00C3413B /* Debug */,
+				9FC0213823BE1F3B00C3413B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9FC020FE23BE1F3B00C3413B /* Project object */;
+}

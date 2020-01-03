@@ -1,0 +1,6 @@
+framework module Pods_WiccWalletSwift {
+  umbrella header "Pods-WiccWalletSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
