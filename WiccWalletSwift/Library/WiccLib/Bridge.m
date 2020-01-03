@@ -22,7 +22,7 @@
 
 //根据助记词获取私钥和地址
 + (NSArray *)getAddressAndPrivateKeyWithHelpString:(NSString *)helpStr{
-    NSError *error = [[NSError alloc] init];
+    NSError *error = nil;
     NSString *privateKey = WiccwalletGetPrivateKeyFromMnemonic(helpStr, [self getNetType],&error);
     NSString *address = WiccwalletGetAddressFromMnemonic(helpStr,[self getNetType],&error);
 
@@ -80,7 +80,7 @@
 
 //检验助记词
 +(BOOL) checkMnemonicCode:(NSString*)words{
-    NSError *error = [[NSError alloc] init];
+    NSError *error = nil;
     NSString *address = WiccwalletGetAddressFromMnemonic(words, [self getNetType],&error);
     if (address){
         return YES;
@@ -90,7 +90,7 @@
 //检验私钥
 +(BOOL) checkPrivateKey:(NSString*)private{
     BOOL isTrue = true;
-    NSError *error = [[NSError alloc] init];
+    NSError *error = nil;
     BOOL isRight  = WiccwalletCheckPrivateKey(private, [self getNetType], &isTrue, &error);
     NSLog(@"%d",isTrue);
     return isRight;
@@ -100,7 +100,7 @@
 
 //获取激活hex
 + (NSString *)getActrivateHexWithHelpStr:(NSString *)helpStr privateKey:(NSString*)privateKey Fees:(double)fees validHeight:(double)validHeight{
-    NSError *error = [[NSError alloc] init];
+    NSError *error = nil;
     NSString *private = @"";
     if ([privateKey isEqualToString:@""]){
         private = WiccwalletGetPrivateKeyFromMnemonic(helpStr, [self getNetType],&error);
@@ -117,7 +117,7 @@
 
 //获取转账wicc hex
 + (NSString *)getTransfetWICCHexWithHelpStr:(NSString *)helpStr privateKey:(NSString*)privateKey Fees:(double)fees validHeight:(double)validHeight srcRegId:(NSString *)srcRegId destAddr:(NSString *)destAddr transferValue:(NSString *)value {
-    NSError *error = [[NSError alloc] init];
+    NSError *error = nil;
     NSString *private = @"";
     if ([privateKey isEqualToString:@""]){
         private = WiccwalletGetPrivateKeyFromMnemonic(helpStr, [self getNetType],&error);
@@ -126,7 +126,7 @@
     }
     UInt64 fee = fees*100000000+(NSInteger)(arc4random() % 100);
     uint64_t txNum = [self handelNumMultiply8:value];
-    NSError *error2 = [[NSError alloc] init];
+    NSError *error2 = nil;
     WiccwalletCommonTxParam * para = [[WiccwalletCommonTxParam alloc] init];
     para.fees = fee;
     para.validHeight = validHeight;
@@ -144,7 +144,7 @@
 ///多币种转账签名
 + (NSString *)getUcoinTXHexWithHelpStr:(NSString *)helpStr privateKey:(NSString*)privateKey Fees:(double)fees validHeight:(double)validHeight srcRegId:(NSString *)srcRegId destAddr:(NSString *)destAddr coinSymbol:(NSString *)coinSymbol transferValue:(NSString*)value feeSymbol:(NSString *)feeSymbol memo:(NSString *)memo{
     
-    NSError *error = [[NSError alloc] init];
+    NSError *error = nil;
     NSString *private = @"";
     if ([privateKey isEqualToString:@""]){
         private = WiccwalletGetPrivateKeyFromMnemonic(helpStr, [self getNetType],&error);
@@ -154,7 +154,7 @@
     UInt64 fee = fees*100000000+(NSInteger)(arc4random() % 100);
     uint64_t txNum = [self handelNumMultiply8:value];
     
-    NSError *error2 = [[NSError alloc] init];
+    NSError *error2 = nil;
     WiccwalletUCoinTransferTxParam * para = [[WiccwalletUCoinTransferTxParam alloc] init];
     
     WiccwalletDestArr * desta = [[WiccwalletDestArr alloc] init];
@@ -185,7 +185,7 @@
 
 ///多币种合约签名
 + (NSString *)getUcoinContractHexWithHelpStr:(NSString *)helpStr privateKey:(NSString*)privateKey Fees:(double)fees validHeight:(double)validHeight srcRegId:(NSString *)srcRegId appid:(NSString *)appid coinSymbol:(NSString *)coinSymbol coinAmount:(NSString*)coinAmount feeSymbol:(NSString *)feeSymbol contractHex:(NSString *)contractHex{
-    NSError *error = [[NSError alloc] init];
+    NSError *error = nil;
     NSString *private = @"";
     if ([privateKey isEqualToString:@""]){
         private = WiccwalletGetPrivateKeyFromMnemonic(helpStr, [self getNetType],&error);
@@ -194,7 +194,7 @@
     }
     UInt64 fee = fees*100000000+(NSInteger)(arc4random() % 100);
     uint64_t txNum = [self handelNumMultiply8:coinAmount];
-    NSError *error2 = [[NSError alloc] init];
+    NSError *error2 = nil;
     WiccwalletUCoinContractTxParam * para = [[WiccwalletUCoinContractTxParam alloc] init];
     para.fees = fee;
     para.validHeight = validHeight;
@@ -217,7 +217,7 @@
 }
 //获取合约签名
 + (NSString *)getContractHexByContractStrWithHelpStr:(NSString *)helpStr privateKey:(NSString*)privateKey blockHeight:(double)validHeight regessID:(NSString *)regessID appid:(NSString *)appid contractStr:(NSString *)contractStr handleValue:(double)value fee:(double)fee{
-    NSError *error = [[NSError alloc] init];
+    NSError *error = nil;
     NSString *private = @"";
     if ([privateKey isEqualToString:@""]){
         private = WiccwalletGetPrivateKeyFromMnemonic(helpStr, [self getNetType],&error);
@@ -246,7 +246,7 @@
 
 //发布合约
 + (NSString *)contractPub:(NSString *)helpStr privateKey:(NSString*)privateKey blockHeight:(double)validHeight regessId:(NSString *)regessID contractStr:(NSString *)contractStr desc:(NSString *)desc fee:(double)fee{
-    NSError *error = [[NSError alloc] init];
+    NSError *error = nil;
     NSString *private = @"";
     if ([privateKey isEqualToString:@""]){
         private = WiccwalletGetPrivateKeyFromMnemonic(helpStr, [self getNetType],&error);
@@ -275,7 +275,7 @@
 
 //节点投票
 + (NSString *)nodeVote:(NSString *)helpStr blockHeight:(double)validHeight regessId:(NSString *)regessID beVotePubkey:(NSArray *)beVotePubkey beVoteAmounts:(NSArray *)beVoteAmounts fee:(double)fee{
-    NSError *error = [[NSError alloc] init];
+    NSError *error = nil;
     NSString *privateKey = WiccwalletGetPrivateKeyFromMnemonic(helpStr,[self getNetType],&error);
     UInt64 exFee = fee * 100000000 + (NSInteger)(arc4random() % 100);
     WiccwalletDelegateTxParam * para = [[WiccwalletDelegateTxParam alloc] init];
@@ -304,7 +304,7 @@
 
 + (BOOL)checkAddress:(NSString *)address{
     BOOL b = false;
-    NSError *error = [[NSError alloc] init];
+    NSError *error = nil;
     BOOL a = WiccwalletCheckWalletAddress(address, [self getNetType], &b, &error);
     return a;
 }
@@ -339,7 +339,7 @@
 
 
 +(NSArray *)privateKeyToSingHex:(NSString *)privateKey randomStr:(nonnull NSString *)randomStr{
-    NSError *error = [[NSError alloc] init];
+    NSError *error = nil;
     WiccwalletSignMessageParam *msgParam = WiccwalletSignMessage(privateKey, randomStr, &error);
     NSString *pubKey = msgParam.publicKey;
     NSString *signMsg = msgParam.signMessage;
@@ -357,7 +357,7 @@
 
 ///发布资产签名
 + (NSString *)getAssetIssueStr:(NSString *)helpStr privateKey:(NSString*)privateKey Fees:(double)fees validHeight:(double)validHeight srcRegId:(NSString *)srcRegId assetSymbol:(NSString *)assetSymbol assetName:(NSString *)assetName assetTotal:(double)assetTotal feeSymbol:(NSString *)feeSymbol assetOwner:(NSString *)assetOwner minTable:(BOOL)minTable{
-    NSError *error = [[NSError alloc] init];
+    NSError *error = nil;
     NSString *private = @"";
     if ([privateKey isEqualToString:@""]){
         private = WiccwalletGetPrivateKeyFromMnemonic(helpStr, [self getNetType],&error);
@@ -389,7 +389,7 @@
 
 ///更新资产签名
 + (NSString *)getAssetUpdateStr:(NSString *)helpStr privateKey:(NSString*)privateKey Fees:(double)fees validHeight:(double)validHeight srcRegId:(NSString *)srcRegId assetSymbol:(NSString *)assetSymbol feeSymbol:(NSString *)feeSymbol updateValue:(NSString *)updateValue updateType:(NSInteger)updateType{
-    NSError *error = [[NSError alloc] init];
+    NSError *error = nil;
     NSString *private = @"";
     if ([privateKey isEqualToString:@""]){
         private = WiccwalletGetPrivateKeyFromMnemonic(helpStr, [self getNetType],&error);
@@ -428,7 +428,7 @@
 //创建、追加cdp
 + (NSString *)getCdpCreateHexWithBridgeModel:(BridgeModel *)bridgeModel cdpId:(NSString *)cdpId scoinSymbol:(NSString*)scoinSymbol scoinMint:(NSString *)scoinMint assetAmount:(NSString*)assetAmount assetSymbol:(NSString *)assetSymbol{
     
-    NSError *error = [[NSError alloc] init];
+    NSError *error = nil;
     NSString *private = @"";
     if ([bridgeModel.privateKey isEqualToString:@""]){
         private = WiccwalletGetPrivateKeyFromMnemonic(bridgeModel.helpStr, [self getNetType],&error);
@@ -468,7 +468,7 @@
 //赎回cdp
 + (NSString *)getCdpRedeemHexWithBridgeModel:(BridgeModel *)bridgeModel cdpId:(NSString *)cdpId scoinsToRepay:(NSString*)scoinsToRepay assetAmount:(NSString*)assetAmount assetSymbol:(NSString *)assetSymbol{
     
-    NSError *error = [[NSError alloc] init];
+    NSError *error = nil;
     NSString *private = @"";
     if ([bridgeModel.privateKey isEqualToString:@""]){
         private = WiccwalletGetPrivateKeyFromMnemonic(bridgeModel.helpStr, [self getNetType],&error);
@@ -506,7 +506,7 @@
 //清算cdp
 + (NSString *)getCdpdLiquidHexWithBridgeModel:(BridgeModel *)bridgeModel cdpId:(NSString *)cdpId scoinsLiquidate:(NSString*)scoinsLiquidate assetSymbol:(NSString *)assetSymbol{
     
-    NSError *error = [[NSError alloc] init];
+    NSError *error = nil;
     NSString *private = @"";
     if ([bridgeModel.privateKey isEqualToString:@""]){
         private = WiccwalletGetPrivateKeyFromMnemonic(bridgeModel.helpStr, [self getNetType],&error);
@@ -539,7 +539,7 @@
 //Dex限价
 + (NSString *)getDexLimitHexWithBridgeModel:(BridgeModel *)bridgeModel assetSymbol:(NSString *)assetSymbol coinSymbol:(NSString *)coinSymbol price:(NSString *)price assetAmount:(NSString *)assetAmount dexTxType:(NSString*)dexTxType{
     
-    NSError *error = [[NSError alloc] init];
+    NSError *error = nil;
     NSString *private = @"";
     if ([bridgeModel.privateKey isEqualToString:@""]){
         private = WiccwalletGetPrivateKeyFromMnemonic(bridgeModel.helpStr, [self getNetType],&error);
@@ -575,7 +575,7 @@
 //Dex市价
 + (NSString *)getDexMarketHexWithBridgeModel:(BridgeModel *)bridgeModel assetSymbol:(NSString *)assetSymbol coinSymbol:(NSString *)coinSymbol assetAmount:(NSString *)assetAmount dexTxType:(NSString *)dexTxType{
     
-    NSError *error = [[NSError alloc] init];
+    NSError *error = nil;
     NSString *private = @"";
     if ([bridgeModel.privateKey isEqualToString:@""]){
         private = WiccwalletGetPrivateKeyFromMnemonic(bridgeModel.helpStr, [self getNetType],&error);
@@ -611,7 +611,7 @@
 //Dex取消
 + (NSString *)getDexCancelHexWithBridgeModel:(BridgeModel *)bridgeModel dexTxid:(NSString *)dexTxid{
     
-    NSError *error = [[NSError alloc] init];
+    NSError *error = nil;
     NSString *private = @"";
     if ([bridgeModel.privateKey isEqualToString:@""]){
         private = WiccwalletGetPrivateKeyFromMnemonic(bridgeModel.helpStr, [self getNetType],&error);

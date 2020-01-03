@@ -198,16 +198,16 @@ extension WebViewJavascriptBridge{
                 if let value = responseDic["fee"].number{
                     fee = Bridge.handelNumDivide8(value.description).toDouble()
                 }
-                if let value = responseDic["height"].string{
-                    validHeight = value.toDouble()
-                }
+
+                validHeight = responseDic["height"].double ?? 0
+
                 if let value = responseDic["regId"].string{
                     regId = value
                 }
                 if let destArr = responseDic["destArr"].array{
                     if (destArr.count == 0){
                         if let cb = callBlock{
-                            cb(["errorCode":2200,"errorMsg":"参数错误".local,"result":""])
+                            cb(["errorCode":2200,"errorMsg":"参数错误".local,"result":"","isComplete":"0"])
                         }
                         return
                     }
@@ -235,7 +235,7 @@ extension WebViewJavascriptBridge{
                 
                 if !Bridge.checkAddress(destAddr) {
                     if let cb = callBlock{
-                        cb(["isComplete":"4030"])
+                        cb(["errorCode":4030,"isComplete":"0","errorMsg":"接收地址错误".local])
                     }
                     return
                 }
@@ -246,7 +246,7 @@ extension WebViewJavascriptBridge{
                     
                     if privateKey == ""{
                         if let cb = callBlock{
-                            cb(["isComplete":"4010"])
+                            cb(["errorCode":4010,"isComplete":"0"])
                         }
                         return
                     }
@@ -261,7 +261,7 @@ extension WebViewJavascriptBridge{
                 }
             }else{
                 if let c = callBlock{
-                    c(["isComplete":"4040","errorMsg":signHex])
+                    c(["errorCode":4040,"isComplete":"0","errorMsg":signHex])
                 }
             }
             
