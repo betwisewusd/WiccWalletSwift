@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class ViewController: BaseWebController {
+class ViewController: WaykiChainViewController {
 
 //    @IBOutlet weak var webview: WKWebView!
     override func viewDidLoad() {

@@ -38,7 +38,7 @@
 		9FC0218523BEE03F00C3413B /* ConfigureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0218423BEE03F00C3413B /* ConfigureManager.swift */; };
 		9FC0218723BEE1B700C3413B /* OtherTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0218623BEE1B700C3413B /* OtherTools.swift */; };
 		9FC0218923BEE40000C3413B /* BaseWebProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0218823BEE40000C3413B /* BaseWebProvider.swift */; };
-		9FC0218B23BEE48E00C3413B /* BaseWebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0218A23BEE48D00C3413B /* BaseWebController.swift */; };
+		9FC0218B23BEE48E00C3413B /* WaykiChainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0218A23BEE48D00C3413B /* WaykiChainViewController.swift */; };
 		9FC0218D23BEF2A700C3413B /* JSToAppNotifyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0218C23BEF2A600C3413B /* JSToAppNotifyManager.swift */; };
 		9FC0218F23BF164600C3413B /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0218E23BF164600C3413B /* RequestHandler.swift */; };
 		9FC0219323BF1D1100C3413B /* UUIDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0219123BF1D1100C3413B /* UUIDTool.m */; };
@@ -115,7 +115,7 @@
 		9FC0218423BEE03F00C3413B /* ConfigureManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureManager.swift; sourceTree = "<group>"; };
 		9FC0218623BEE1B700C3413B /* OtherTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherTools.swift; sourceTree = "<group>"; };
 		9FC0218823BEE40000C3413B /* BaseWebProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebProvider.swift; sourceTree = "<group>"; };
-		9FC0218A23BEE48D00C3413B /* BaseWebController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebController.swift; sourceTree = "<group>"; };
+		9FC0218A23BEE48D00C3413B /* WaykiChainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaykiChainViewController.swift; sourceTree = "<group>"; };
 		9FC0218C23BEF2A600C3413B /* JSToAppNotifyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSToAppNotifyManager.swift; sourceTree = "<group>"; };
 		9FC0218E23BF164600C3413B /* RequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 		9FC0219123BF1D1100C3413B /* UUIDTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUIDTool.m; sourceTree = "<group>"; };
@@ -233,7 +233,7 @@
 				9FC0218023BEDE8E00C3413B /* LocalizationTool.swift */,
 				9FC0218423BEE03F00C3413B /* ConfigureManager.swift */,
 				9FC0218823BEE40000C3413B /* BaseWebProvider.swift */,
-				9FC0218A23BEE48D00C3413B /* BaseWebController.swift */,
+				9FC0218A23BEE48D00C3413B /* WaykiChainViewController.swift */,
 				9FC0218E23BF164600C3413B /* RequestHandler.swift */,
 				9FC0213D23BE1F6200C3413B /* Wiccwallet.framework */,
 				9FC0213E23BE1F6200C3413B /* BridgeModel.m */,
@@ -530,7 +530,7 @@
 				9FC0214823BE226800C3413B /* ADecoder.swift in Sources */,
 				9FC0215B23BE270F00C3413B /* SecurityUtil.m in Sources */,
 				9FC0210C23BE1F3B00C3413B /* SceneDelegate.swift in Sources */,
-				9FC0218B23BEE48E00C3413B /* BaseWebController.swift in Sources */,
+				9FC0218B23BEE48E00C3413B /* WaykiChainViewController.swift in Sources */,
 				9FC0214123BE1F6200C3413B /* BridgeModel.m in Sources */,
 				9FC0217823BED74000C3413B /* WebViewJavascriptBridge_JS.m in Sources */,
 				9FC0214A23BE230200C3413B /* Object.swift in Sources */,

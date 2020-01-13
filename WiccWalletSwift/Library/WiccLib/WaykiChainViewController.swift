@@ -1,5 +1,5 @@
 //
-//  BaseWebController.swift
+//  WaykiChainViewController.swift
 //  CommApp
 //
 //  Created by sorath on 2018/10/10.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseWebController: UIViewController {
+class WaykiChainViewController: UIViewController {
 
     override var preferredStatusBarStyle: UIStatusBarStyle{get { return.default}}
     var wkWebView: WKWebView = WKWebView.init()
@@ -83,7 +83,7 @@ class BaseWebController: UIViewController {
 }
 
 //MARK: - WKNavigationDelegate/Create
-extension BaseWebController:WKNavigationDelegate, UIScrollViewDelegate{
+extension WaykiChainViewController:WKNavigationDelegate, UIScrollViewDelegate{
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         loadingView?.removeFromSuperview()
         let errors = error as NSError
@@ -220,7 +220,7 @@ extension BaseWebController:WKNavigationDelegate, UIScrollViewDelegate{
 
 
 //MARK: - WKWebViewConfiger
-extension BaseWebController {
+extension WaykiChainViewController {
     //设置与js交互的bridge和处理事件
     func setupBridge(){
         bridge = bridgeForWebView(wkWebView)

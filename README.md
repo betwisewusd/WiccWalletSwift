@@ -4,18 +4,24 @@
 
 展示了每个版本的工具包，包含BetWise(iOS)对接文档及相关资料，接入时推荐使用最新版本的工具包。
 
-## 主网和测试网的切换
+## WiccWalletSwift 提供了什么
 
-在 `ConfigureManager.swift` 这个文件内修改主网和测试网
+WiccWalletSwift 提供了 `WaykiChainViewController` 继承 `WaykiChainViewController` 的 `UIViewController` 持有一个 `wkWebView` 使用 `wkWebView` 打开 `Wicc 提供的网页钱包` 可以获得钱包转账等能力。
 
-测试网
-```swift
-var walletNetConfirure:Int = ChainNet.test.rawValue
-```
+```Swift
+class ViewController: WaykiChainViewController {
 
-主网
-```swift
-var walletNetConfirure:Int = ChainNet.main.rawValue
+//    @IBOutlet weak var webview: WKWebView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // 钱包URL
+        let url = URLRequest(url: URL(string: "https://dev-app.betwise888.com/wallet/index.html#/")!)
+        wkWebView.load(url)
+
+        self.view.addSubview(wkWebView)
+    }
+
+}
 ```
 
 ## Wallet UI 测试环境和生产环境切换
@@ -32,4 +38,18 @@ var walletNetConfirure:Int = ChainNet.main.rawValue
 ```swift
     let url = URLRequest(url: URL(string: "https://m.xchaingame.com/wallet/index.html#/")!)
     wkWebView.load(url)
+```
+
+## 主网和测试网的切换
+
+在 `ConfigureManager.swift` 这个文件内修改主网和测试网
+
+测试网
+```swift
+var walletNetConfirure:Int = ChainNet.test.rawValue
+```
+
+主网
+```swift
+var walletNetConfirure:Int = ChainNet.main.rawValue
 ```
