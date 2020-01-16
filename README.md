@@ -30,13 +30,13 @@ class ViewController: WaykiChainViewController {
 
 测试环境
 ```swift
-    let url = URLRequest(url: URL(string: "https://test-app.betwise888.com/wallet/index.html#/")!)
+    let url = URLRequest(url: URL(string: "https://test-app.betwise888.com")!)
     wkWebView.load(url)
 ```
 
 生产环境
 ```swift
-    let url = URLRequest(url: URL(string: "https://m.xchaingame.com/wallet/index.html#/")!)
+    let url = URLRequest(url: URL(string: "https://m.xchaingame.com")!)
     wkWebView.load(url)
 ```
 
